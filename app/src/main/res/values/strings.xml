@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+    <!-- ViewPager tab names -->
+    <string name="tab_popular">Most Popular</string>
+    <string name="tab_top_rated">Top Rated</string>
+    <string name="tab_favorites">Favorites</string>
+
+    <string-array name="tab_names">
+        <item>@string/tab_popular</item>
+        <item>@string/tab_top_rated</item>
+        <item>@string/tab_favorites</item>
+    </string-array>
+
+    <!-- Notifications and messages. -->
+    <string name="error_no_internet">
+        No internet connection detected, only local data available.
+    </string>
+
+    <string name="error_no_api_connection">
+        API server connection is not available, please try again later.
+    </string>
+
+    <string name="notification_update">Local movies database updated.</string>
+
+    <string name="no_movie_selected">Please select a movie to see its information.</string>
+
+    <string name="favorites_movie_added">Movie added to favorites.</string>
+    <string name="favorites_movie_removed">Movie removed from favorites.</string>
+
+    <!--Details Activity-->
+    <string name="details_overview">Synopsis:</string>
+    <string name="details_trailers">Trailers:</string>
+    <string name="details_reviews">Reviews:</string>
+
+    <string name="details_review_author">&lt;b>Author:&lt;/b> %s</string>
+    <string name="details_review_link">&lt;a href=\"%s\">Read full review&lt;/a></string>
+
+    <string name="rating_suffix" translatable="false">/10</string>
+
+    <!-- Accessibility. -->
+    <string name="details_background_image">Background movie image.</string>
+    <string name="details_poster_image">Movie poster image.</string>
+    <string name="details_tmdb_logo">themoviedb.org logo.</string>
+
+    <!-- Data sync xml settings strings -->
+    <string name="account_type" translatable="false">com.sedsoftware.udacity</string>
+    <string name="content_authority" translatable="false">com.sedsoftware.udacity.popularmovies</string>
+
+
+    <!-- Dummy text data, used with tools:text in Details Screen -->
+    <string name="dummy_title" translatable="false">Fantastic Beasts and Where to Find Them</string>
+    <string name="dummy_rating" translatable="false">7.0/10</string>
+    <string name="dummy_release_date" translatable="false">16 November, 2016</string>
+    <string name="dummy_overview" translatable="false">In 1926, Newt Scamander arrives at the
+        Magical Congress of the United States of America with a magically expanded briefcase,
+        which houses a number of dangerous creatures and their habitats. When the creatures escape
+        from the briefcase, it sends the American wizarding authorities after Newt, and threatens
+        to strain even further the state of magical and non-magical relations.</string>
+
+</resources>
