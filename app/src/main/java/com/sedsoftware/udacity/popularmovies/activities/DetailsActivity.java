@@ -28,13 +28,18 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         Intent intent = getIntent();
-        Uri contentUri = intent.getParcelableExtra(PageFragment.ARG_URI);
-        int movieId = intent.getIntExtra(PageFragment.ARG_ID, 0);
+        Bundle extras = intent.getExtras();
 
-        DetailsFragment newDetails = DetailsFragment.newInstance(contentUri, movieId);
+        if (extras != null && extras.containsKey(PageFragment.ARG_URI)) {
 
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.container, newDetails);
-        ft.commit();
+            Uri contentUri = extras.getParcelable(PageFragment.ARG_URI);
+            int movieId = intent.getIntExtra(PageFragment.ARG_ID, 0);
+
+            DetailsFragment newDetails = DetailsFragment.newInstance(contentUri, movieId);
+
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.container, newDetails);
+            ft.commit();
+        }
     }
 }
