@@ -132,7 +132,9 @@ public class PageFragment extends Fragment implements
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-        mAdapter.swapCursor(null);
+        if (mAdapter != null) {
+            mAdapter.swapCursor(null);
+        }
     }
 
     @Override
