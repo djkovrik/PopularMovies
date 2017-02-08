@@ -312,7 +312,11 @@ public class DetailsFragment extends Fragment implements
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                Intent watchIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+
+                if (watchIntent.resolveActivity(getContext().getPackageManager()) != null) {
+                    startActivity(watchIntent);
+                }
             }
         });
 
